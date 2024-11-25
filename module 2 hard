@@ -1,0 +1,12 @@
+r = 20
+password = []
+for i in range(1, r // 2 + 1):
+    for j in range(1, r):
+        if r % (i + j) == 0 and (i != j) and ([i, j] not in password) and ([j, i] not in password):
+            password.append([i, j])
+print("здесь можно отследить пары", password)
+result = ''
+for i in password:
+    for j in i:
+        result += str(j)
+print(result)
